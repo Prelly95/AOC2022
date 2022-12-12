@@ -28,57 +28,51 @@ fn part1(input: &str) -> Result<()> {
     for l in input.lines() {
         let (a, b) = l.split_once(" ").unwrap();
         match a {
-            "A" => {
-                match b {
-                    "X" => {
-                        let score = ROCK + DRAW;
-                        total_score += score as u32;
-                    }
-                    "Y" => {
-                        let score = PAPER + WIN;
-                        total_score += score as u32;
-                    }
-                    "Z" => {
-                        let score = SCISSORS + LOSE;
-                        total_score += score as u32;
-                    }
-                    _ => {}
+            "A" => match b {
+                "X" => {
+                    let score = ROCK + DRAW;
+                    total_score += score as u32;
                 }
-            }
-            "B" => {
-                match b {
-                    "X" => {
-                        let score = ROCK + LOSE;
-                        total_score += score as u32;
-                    }
-                    "Y" => {
-                        let score = PAPER + DRAW;
-                        total_score += score as u32;
-                    }
-                    "Z" => {
-                        let score = SCISSORS + WIN;
-                        total_score += score as u32;
-                    }
-                    _ => {}
+                "Y" => {
+                    let score = PAPER + WIN;
+                    total_score += score as u32;
                 }
-            }
-            "C" => {
-                match b {
-                    "X" => {
-                        let score = ROCK + WIN;
-                        total_score += score as u32;
-                    }
-                    "Y" => {
-                        let score = PAPER + LOSE;
-                        total_score += score as u32;
-                    }
-                    "Z" => {
-                        let score = SCISSORS + DRAW;
-                        total_score += score as u32;
-                    }
-                    _ => {}
+                "Z" => {
+                    let score = SCISSORS + LOSE;
+                    total_score += score as u32;
                 }
-            }
+                _ => {}
+            },
+            "B" => match b {
+                "X" => {
+                    let score = ROCK + LOSE;
+                    total_score += score as u32;
+                }
+                "Y" => {
+                    let score = PAPER + DRAW;
+                    total_score += score as u32;
+                }
+                "Z" => {
+                    let score = SCISSORS + WIN;
+                    total_score += score as u32;
+                }
+                _ => {}
+            },
+            "C" => match b {
+                "X" => {
+                    let score = ROCK + WIN;
+                    total_score += score as u32;
+                }
+                "Y" => {
+                    let score = PAPER + LOSE;
+                    total_score += score as u32;
+                }
+                "Z" => {
+                    let score = SCISSORS + DRAW;
+                    total_score += score as u32;
+                }
+                _ => {}
+            },
             _ => {}
         }
     }
@@ -91,57 +85,51 @@ fn part2(input: &str) -> Result<()> {
     for l in input.lines() {
         let (a, b) = l.split_once(" ").unwrap();
         match a {
-            "A" => {
-                match b {
-                    "X" => {
-                        let score = SCISSORS + LOSE;
-                        total_score += score as u32;
-                    }
-                    "Y" => {
-                        let score = ROCK + DRAW;
-                        total_score += score as u32;
-                    }
-                    "Z" => {
-                        let score = PAPER + WIN;
-                        total_score += score as u32;
-                    }
-                    _ => {}
+            "A" => match b {
+                "X" => {
+                    let score = SCISSORS + LOSE;
+                    total_score += score as u32;
                 }
-            }
-            "B" => {
-                match b {
-                    "X" => {
-                        let score = ROCK + LOSE;
-                        total_score += score as u32;
-                    }
-                    "Y" => {
-                        let score = PAPER + DRAW;
-                        total_score += score as u32;
-                    }
-                    "Z" => {
-                        let score = SCISSORS + WIN;
-                        total_score += score as u32;
-                    }
-                    _ => {}
+                "Y" => {
+                    let score = ROCK + DRAW;
+                    total_score += score as u32;
                 }
-            }
-            "C" => {
-                match b {
-                    "X" => {
-                        let score = PAPER + LOSE;
-                        total_score += score as u32;
-                    }
-                    "Y" => {
-                        let score = SCISSORS + DRAW;
-                        total_score += score as u32;
-                    }
-                    "Z" => {
-                        let score = ROCK + WIN;
-                        total_score += score as u32;
-                    }
-                    _ => {}
+                "Z" => {
+                    let score = PAPER + WIN;
+                    total_score += score as u32;
                 }
-            }
+                _ => {}
+            },
+            "B" => match b {
+                "X" => {
+                    let score = ROCK + LOSE;
+                    total_score += score as u32;
+                }
+                "Y" => {
+                    let score = PAPER + DRAW;
+                    total_score += score as u32;
+                }
+                "Z" => {
+                    let score = SCISSORS + WIN;
+                    total_score += score as u32;
+                }
+                _ => {}
+            },
+            "C" => match b {
+                "X" => {
+                    let score = PAPER + LOSE;
+                    total_score += score as u32;
+                }
+                "Y" => {
+                    let score = SCISSORS + DRAW;
+                    total_score += score as u32;
+                }
+                "Z" => {
+                    let score = ROCK + WIN;
+                    total_score += score as u32;
+                }
+                _ => {}
+            },
             _ => {}
         }
     }

@@ -88,16 +88,15 @@ fn part2(mut dock: HashMap<usize, Vec<String>>, instructions: &str) -> Result<()
         let m = vals[0];
         let f = vals[1];
         let t = vals[2];
-		let mut bx = vec![];
+        let mut bx = vec![];
         for _ in 0..m {
             bx.push(dock.get_mut(&f).unwrap().remove(0));
         }
-		bx.reverse();
-		for b in bx
-		{
-			let to_stack = dock.get_mut(&t).unwrap();
-			to_stack.insert(0, b);
-		}
+        bx.reverse();
+        for b in bx {
+            let to_stack = dock.get_mut(&t).unwrap();
+            to_stack.insert(0, b);
+        }
     }
     let mut res = vec![String::new(); dock.len()];
     for (k, v) in dock {
